@@ -57,7 +57,6 @@
               </p>
             </a>
           </li>
-          @endif
           <li class="nav-item">
             <a href="{{ route('banner') }}" class="nav-link {{ set_active(['banner','banner-add','banner-edit']) }}">
               <i class="nav-icon fas fa-th"></i>
@@ -66,6 +65,7 @@
               </p>
             </a>
           </li>
+          @endif
           <li class="nav-item">
             <a href="{{ route('pemesanan') }}" class="nav-link {{ set_active(['pemesanan','pemesanan-detail']) }}">
               <i class="nav-icon fas fa-th"></i>

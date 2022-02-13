@@ -44,6 +44,8 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Level</th>
+                                    <th>user id</th>
+                                    <th>login id</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -55,6 +57,8 @@
                                         <td>{{ $user->email }}</td>
                                         {{-- <td> @if($user->level == '1') {{ 'Admin' }} @else {{ 'Kasir' }}  @endif </td> --}}
                                         <td> {{ $user->level == '1' ? 'Admin' : 'Kasir'  }}</td>
+                                        <td>{{ $user->id }}</td>
+                                        <td>{{ Auth::user()->id }}</td>
                                         <td>
                                             @if (Auth::user()->level == '1')
                                             <a href="{{ route('users-edit', $user->id ) }}" class="btn btn-sm btn-success">Edit</a>
